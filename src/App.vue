@@ -1,5 +1,6 @@
 <template>
   <div class="ctr">
+    <transition name="fade" mode="out-in">
     <questions-component
       v-if="answerQuestions < questions.length"
       :questions="questions"
@@ -7,6 +8,7 @@
       @select-correct="selectAnswer"
     />
     <result-component v-else :results="results" :totalCorrect="totalCorrect" />
+    </transition>
      <button type="button" class="reset-btn" @click.prevent ="reset"
      v-if="answerQuestions === questions.length"
      
