@@ -64,7 +64,7 @@ export default {
               is_correct: false,
             },
             {
-              text: "3",
+              text: "6",
               is_correct: true,
             },
             {

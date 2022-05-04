@@ -2,7 +2,7 @@
 <div class="questions-ctr">
         <div class="progress">
             <div class="bar" :style="{width: `${answerQuestions / questions.length * 100}% `}"></div>
-            <div class="status">{{answerQuestions}} out of {{questions.length}} questions answered</div>
+            <div class="status"> {{questions.length}} sorudan {{answerQuestions}}'ı cevaplandı</div>
         </div>
         <transition-group name="fade">
         
