@@ -4,7 +4,7 @@
       v-if="answerQuestions < questions.length"
       :questions="questions"
       :answerQuestions="answerQuestions"
-      @select-correct="selectAnswer()"
+      @select-correct="selectAnswer"
     />
     <result-component v-else :results="results" :totalCorrect="totalCorrect" />
      <button type="button" class="reset-btn" @click.prevent ="reset"
@@ -30,7 +30,7 @@ export default {
       totalCorrect: 0,
       questions: [
         {
-          q: "What is 2 + 2?",
+          q: "2 + 2?",
           answers: [
             {
               text: "4",
@@ -41,7 +41,7 @@ export default {
               is_correct: false,
             },
             {
-              text: "Fish",
+              text: "Balık",
               is_correct: false,
             },
             {
@@ -51,7 +51,7 @@ export default {
           ],
         },
         {
-          q: 'How many letters are in the word "Banana"?',
+          q: ' "Banana" Kelimesinde kaç harf var?',
           answers: [
             {
               text: "5",
@@ -62,7 +62,7 @@ export default {
               is_correct: false,
             },
             {
-              text: "6",
+              text: "3",
               is_correct: true,
             },
             {
@@ -72,15 +72,15 @@ export default {
           ],
         },
         {
-          q: "Find the missing letter: C_ke",
+          q: 'Eksik Harfi Bulun "K_k"',
           answers: [
             {
               text: "e",
-              is_correct: false,
+              is_correct: true,
             },
             {
               text: "a",
-              is_correct: true,
+              is_correct: false,
             },
             {
               text: "i",
@@ -97,8 +97,8 @@ export default {
           desc: "Biraz daha çalış başarabilirsin!",
         },
         {
-          min: 1,
-          max: 1,
+          min: 3,
+          max: 3,
           title: "Başardın!",
           desc: "Çalışmak Sana çok fayda Sağladı ;)!",
         },

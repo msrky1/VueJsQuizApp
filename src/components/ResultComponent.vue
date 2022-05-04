@@ -24,7 +24,7 @@ export default {
 
                         index = i;
                 }
-            })
+            });
               return index;
           }
       }, 
